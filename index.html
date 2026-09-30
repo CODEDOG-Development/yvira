@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <!-- Redesign do site Yvira Engenharia e Meio Ambiente · base: DNA da Marca 2026 · desenvolvimento: CodeDog -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Yvira Engenharia e Meio Ambiente | Licenciamento, PGRS, segurança do trabalho e mapeamento aéreo</title>
+  <meta name="description" content="Conformidade ambiental completa, do licenciamento ao PGRS. Engenharia de segurança do trabalho e mapeamento aéreo com modelos 3D para empresas.">
+  <meta name="theme-color" content="#0D3D1F">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Yvira Engenharia e Meio Ambiente">
+  <meta property="og:description" content="Engenharia ambiental para empresas: licenciamento, PGRS, segurança do trabalho e mapeamento aéreo.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Questrial&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+
+  <!-- Marca (duas folhas). TROCAR pelo arquivo oficial do logotipo quando disponível. -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <symbol id="marca-folhas" viewBox="0 0 32 32">
+      <path fill="currentColor" d="M16 28C16 19 11 13 4 11c0 8 4 15 12 17z"/>
+      <path fill="currentColor" d="M16 28c0-9 5-15 12-17 0 8-4 15-12 17z" opacity=".75"/>
+    </symbol>
+  </svg>
+
+  <a class="pular" href="#conteudo">Ir para o conteúdo</a>
+
+  <header class="topo" id="topo">
+    <div class="container topo__barra">
+      <a class="logo" href="#topo" aria-label="Yvira Engenharia e Meio Ambiente, voltar ao início">
+        <svg class="logo__marca" aria-hidden="true" focusable="false"><use href="#marca-folhas"></use></svg>
+        <span>
+          <span class="logo__nome">yvira</span>
+          <span class="logo__sub">Engenharia e Meio Ambiente</span>
+        </span>
+      </a>
+
+      <button class="topo__menu" type="button" aria-expanded="false" aria-controls="menu-principal">
+        <span class="sr-only">Abrir menu</span>
+        <span class="topo__hamb" aria-hidden="true"></span>
+      </button>
+
+      <nav class="menu" id="menu-principal" aria-label="Principal">
+        <ul>
+          <li><a href="#servicos">Serviços</a></li>
+          <li><a href="#processo">Processo</a></li>
+          <li><a href="#mapeamento">Mapeamento aéreo</a></li>
+          <li><a href="#principios">Princípios</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+        <a class="botao botao--claro" href="#contato">Solicitar contato</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo">
+
+    <!-- HERO: terreno topográfico desenhado em canvas (ver js/script.js) -->
+    <section class="hero" aria-labelledby="hero-titulo">
+      <canvas class="hero__terreno" aria-hidden="true"></canvas>
+      <div class="container hero__conteudo">
+        <h1 class="hero__titulo" id="hero-titulo">Engenharia ambiental para empresas.</h1>
+        <p class="hero__texto">Conformidade ambiental completa, do licenciamento ao PGRS — garantindo segurança operacional e proteção contra fiscalizações.</p>
+        <div class="hero__acoes">
+          <a class="botao botao--claro" href="#contato">Falar com um especialista</a>
+          <a class="botao botao--contorno" href="#servicos">Conhecer os serviços</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVIÇOS -->
+    <section class="secao secao--clara" id="servicos" aria-labelledby="servicos-titulo">
+      <div class="container servicos">
+        <div class="servicos__intro">
+          <h2 id="servicos-titulo">O que a sua empresa precisa para operar dentro da lei.</h2>
+          <p>Quatro frentes de atuação, conduzidas com rigor de engenharia e pensadas para a rotina de quem opera.</p>
+        </div>
+
+        <div class="servicos__lista">
+          <article class="servico">
+            <svg class="servico__icone" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path d="M7 3h8l5 5v13H7z"/><path d="M15 3v5h5"/><path d="M10 14h7M10 17h5"/>
+            </svg>
+            <div>
+              <h3>Licenciamento ambiental</h3>
+              <p>Atrasos no licenciamento custam meses de espera e milhares em multas. Conduzimos o processo para encurtar esse prazo.</p>
+              <a class="servico__link" href="#contato" data-servico="Licenciamento ambiental">Falar sobre licenciamento</a>
+            </div>
+          </article>
+
+          <article class="servico">
+            <svg class="servico__icone" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path d="M12 3l9 5-9 5-9-5z"/><path d="M3 13l9 5 9-5"/>
+            </svg>
+            <div>
+              <h3>Plano de Gerenciamento de Resíduos Sólidos (PGRS)</h3>
+              <p>Elaboramos o PGRS para que a destinação dos resíduos da sua operação siga a legislação e resista a fiscalizações.</p>
+              <a class="servico__link" href="#contato" data-servico="PGRS">Falar sobre o PGRS</a>
+            </div>
+          </article>
+
+          <article class="servico">
+            <svg class="servico__icone" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path d="M4 16a8 8 0 0 1 16 0"/><path d="M3 16h18v2H3z"/><path d="M12 8v4"/>
+            </svg>
+            <div>
+              <h3>Engenharia de Segurança do Trabalho</h3>
+              <p>Engenharia aplicada à prevenção de acidentes e ao cumprimento das normas de segurança nas operações da sua empresa.</p>
+              <a class="servico__link" href="#contato" data-servico="Engenharia de Segurança do Trabalho">Falar sobre segurança do trabalho</a>
+            </div>
+          </article>
+
+          <article class="servico">
+            <svg class="servico__icone" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <rect x="9" y="9" width="6" height="6" rx="1"/>
+              <path d="M9 9L6 6M15 9l3-3M9 15l-3 3M15 15l3 3"/>
+              <circle cx="4.5" cy="4.5" r="2"/><circle cx="19.5" cy="4.5" r="2"/>
+              <circle cx="4.5" cy="19.5" r="2"/><circle cx="19.5" cy="19.5" r="2"/>
+            </svg>
+            <div>
+              <h3>Mapeamento aéreo e modelos 3D</h3>
+              <p>Fotogrametria, ortofotos e modelos digitais de superfície para ver o seu território de cima e decidir com dados.</p>
+              <a class="servico__link" href="#mapeamento">Ver como funciona</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESSO: sequência real de etapas, por isso a numeração (CSS counter) -->
+    <section class="secao secao--escura" id="processo" aria-labelledby="processo-titulo">
+      <div class="container">
+        <div class="processo__intro">
+          <h2 id="processo-titulo">Um processo claro, do primeiro contato à licença emitida.</h2>
+          <p>Em cada etapa, você sabe o que está sendo feito e o que vem a seguir.</p>
+        </div>
+
+        <ol class="processo__lista">
+          <li class="etapa">
+            <h3>Diagnóstico</h3>
+            <p>Avaliamos licenças, notificações, atividades e riscos reais da operação.</p>
+          </li>
+          <li class="etapa">
+            <h3>Levantamento técnico</h3>
+            <p>Visita à empresa e coleta de dados de processo, resíduos, efluentes e emissões.</p>
+          </li>
+          <li class="etapa">
+            <h3>Planejamento</h3>
+            <p>Cronograma técnico e legal, com prioridades para não paralisar a sua operação.</p>
+          </li>
+          <li class="etapa">
+            <h3>Regularização</h3>
+            <p>Elaboração de estudos técnicos, PGRS e demais documentos exigidos.</p>
+          </li>
+          <li class="etapa">
+            <h3>Protocolo</h3>
+            <p>Submissão aos órgãos ambientais competentes e às prefeituras.</p>
+          </li>
+          <li class="etapa">
+            <h3>Acompanhamento</h3>
+            <p>Resposta a exigências, complementações e reuniões técnicas com os órgãos.</p>
+          </li>
+          <li class="etapa">
+            <h3>Licença emitida</h3>
+            <p>Operação segura, documentada e pronta para crescer com tranquilidade.</p>
+          </li>
+        </ol>
+
+        <a class="botao botao--claro processo__acao" href="#contato" data-servico="Licenciamento ambiental">Começar pelo diagnóstico</a>
+      </div>
+    </section>
+
+    <!-- MOTIVOS -->
+    <section class="secao secao--clara" id="motivos" aria-labelledby="motivos-titulo">
+      <div class="container">
+        <h2 class="motivos__titulo" id="motivos-titulo">Seis motivos para confiar na equipe da Yvira.</h2>
+
+        <div class="motivos__grade">
+          <article class="motivo">
+            <span class="motivo__icone" aria-hidden="true">
+              <svg viewBox="0 0 24 24" focusable="false"><circle cx="9" cy="8" r="3"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><circle cx="17" cy="9" r="2.5"/><path d="M17 14c2.5 0 4 1.8 4 4"/></svg>
+            </span>
+            <div>
+              <h3>Atendimento consultivo</h3>
+              <p>Conversa direta com a equipe técnica, sem intermediários.</p>
+            </div>
+          </article>
+
+          <article class="motivo">
+            <span class="motivo__icone" aria-hidden="true">
+              <svg viewBox="0 0 24 24" focusable="false"><rect x="4" y="4" width="7" height="7" rx="1"/><rect x="13" y="4" width="7" height="7" rx="1"/><rect x="4" y="13" width="7" height="7" rx="1"/><rect x="13" y="13" width="7" height="7" rx="1"/></svg>
+            </span>
+            <div>
+              <h3>Quatro frentes, uma equipe</h3>
+              <p>Licenciamento, PGRS, segurança do trabalho e mapeamento aéreo.</p>
+            </div>
+          </article>
+
+          <article class="motivo">
+            <span class="motivo__icone" aria-hidden="true">
+              <svg viewBox="0 0 24 24" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+            </span>
+            <div>
+              <h3>Prazos sob controle</h3>
+              <p>Conduzimos o processo para encurtar esperas que custam meses e multas.</p>
+            </div>
+          </article>
+
+          <article class="motivo">
+            <span class="motivo__icone" aria-hidden="true">
+              <svg viewBox="0 0 24 24" focusable="false"><rect x="9" y="9" width="6" height="6" rx="1"/><path d="M9 9L6 6M15 9l3-3M9 15l-3 3M15 15l3 3"/><circle cx="4.5" cy="4.5" r="2"/><circle cx="19.5" cy="4.5" r="2"/><circle cx="4.5" cy="19.5" r="2"/><circle cx="19.5" cy="19.5" r="2"/></svg>
+            </span>
+            <div>
+              <h3>Tecnologia de campo</h3>
+              <p>Drones, fotogrametria e modelos 3D para trabalhar com dados reais do seu território.</p>
+            </div>
+          </article>
+
+          <article class="motivo">
+            <span class="motivo__icone" aria-hidden="true">
+              <svg viewBox="0 0 24 24" focusable="false"><path d="M12 3l8 3v6c0 4.5-3.2 8-8 9-4.8-1-8-4.5-8-9V6z"/><path d="M8.5 12l2.5 2.5L15.5 10"/></svg>
+            </span>
+            <div>
+              <h3>Suporte completo</h3>
+              <p>Do diagnóstico à licença emitida, com acompanhamento contínuo.</p>
+            </div>
+          </article>
+
+          <article class="motivo">
+            <span class="motivo__icone" aria-hidden="true">
+              <svg viewBox="0 0 24 24" focusable="false"><path d="M4 4v16h16"/><path d="M8 15l3-4 3 2 4-6"/></svg>
+            </span>
+            <div>
+              <h3>Comunicação transparente</h3>
+              <p>Etapas e prazos claros, sem promessas vazias.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- MAPEAMENTO AÉREO -->
+    <section class="secao secao--escura" id="mapeamento" aria-labelledby="mapeamento-titulo">
+      <div class="container mapeamento">
+        <div class="mapeamento__texto">
+          <h2 id="mapeamento-titulo">Do mapeamento aéreo à geração de modelos 3D.</h2>
+          <p class="mapeamento__lead">Veja o que o seu território tem a dizer.</p>
+
+          <div class="camadas" role="tablist" aria-label="Entregas do mapeamento aéreo">
+            <button class="camada" type="button" role="tab" id="aba-fotogrametria" aria-selected="true" aria-controls="painel-fotogrametria" data-camada="fotogrametria">Fotogrametria</button>
+            <button class="camada" type="button" role="tab" id="aba-ortofotos" aria-selected="false" aria-controls="painel-ortofotos" data-camada="ortofotos" tabindex="-1">Ortofotos</button>
+            <button class="camada" type="button" role="tab" id="aba-mds" aria-selected="false" aria-controls="painel-mds" data-camada="mds" tabindex="-1">Modelos digitais de superfície</button>
+          </div>
+
+          <div class="camadas__painel" role="tabpanel" id="painel-fotogrametria" aria-labelledby="aba-fotogrametria" tabindex="0">
+            <p>Imagens aéreas sobrepostas, capturadas por drone, que permitem medir o terreno a partir das fotografias.</p>
+          </div>
+          <div class="camadas__painel" role="tabpanel" id="painel-ortofotos" aria-labelledby="aba-ortofotos" tabindex="0" hidden>
+            <p>Imagem aérea corrigida e georreferenciada: um mapa real do terreno, com escala uniforme em toda a área.</p>
+          </div>
+          <div class="camadas__painel" role="tabpanel" id="painel-mds" aria-labelledby="aba-mds" tabindex="0" hidden>
+            <p>Representação em 3D da superfície, incluindo vegetação e construções, para analisar relevo e volumes.</p>
+          </div>
+
+          <a class="botao botao--claro" href="#contato" data-servico="Mapeamento aéreo e modelos 3D">Solicitar mapeamento</a>
+        </div>
+
+        <figure class="mapeamento__figura" data-ativa="fotogrametria">
+          <svg viewBox="0 0 560 380" aria-hidden="true" focusable="false">
+            <!-- Fotogrametria: fotos com sobreposição ao longo das faixas de voo -->
+            <g class="ilus ilus--fotogrametria">
+              <rect x="50" y="60" width="190" height="160" class="ilus__area"/>
+              <rect x="185" y="60" width="190" height="160" class="ilus__area"/>
+              <rect x="320" y="60" width="190" height="160" class="ilus__area"/>
+              <rect x="50" y="160" width="190" height="160" class="ilus__area"/>
+              <rect x="185" y="160" width="190" height="160" class="ilus__area"/>
+              <rect x="320" y="160" width="190" height="160" class="ilus__area"/>
+              <path class="ilus__tracejado" d="M30 140H530M30 240H530"/>
+              <g class="ilus__ponto">
+                <circle cx="145" cy="140" r="4"/><circle cx="280" cy="140" r="4"/><circle cx="415" cy="140" r="4"/>
+                <circle cx="145" cy="240" r="4"/><circle cx="280" cy="240" r="4"/><circle cx="415" cy="240" r="4"/>
+              </g>
+            </g>
+            <!-- Ortofotos: mosaico único, corrigido e em escala -->
+            <g class="ilus ilus--ortofotos">
+              <rect x="50" y="60" width="460" height="260" class="ilus__contorno"/>
+              <path class="ilus__grade" d="M107.5 60V320M165 60V320M222.5 60V320M280 60V320M337.5 60V320M395 60V320M452.5 60V320M50 112H510M50 164H510M50 216H510M50 268H510"/>
+              <path class="ilus__area" d="M70 90L200 80L230 150L90 170Z"/>
+              <path class="ilus__area" d="M300 200L450 190L480 290L320 300Z"/>
+              <path class="ilus__area" d="M250 90L330 100L310 160L240 150Z"/>
+              <path class="ilus__rio" d="M50 250C150 200 230 290 330 230S470 140 510 160"/>
+            </g>
+            <!-- Modelo digital de superfície: camadas de elevação -->
+            <g class="ilus ilus--mds">
+              <ellipse cx="280" cy="300" rx="210" ry="62" class="ilus__area"/>
+              <ellipse cx="280" cy="274" rx="182" ry="55" class="ilus__area"/>
+              <ellipse cx="280" cy="248" rx="154" ry="48" class="ilus__area"/>
+              <ellipse cx="280" cy="222" rx="126" ry="41" class="ilus__area"/>
+              <ellipse cx="280" cy="196" rx="98" ry="34" class="ilus__area"/>
+              <ellipse cx="280" cy="170" rx="70" ry="27" class="ilus__area"/>
+              <ellipse cx="280" cy="144" rx="42" ry="20" class="ilus__area"/>
+              <path class="ilus__contorno" d="M70 300L98 274L126 248L154 222L182 196L210 170L238 144M490 300L462 274L434 248L406 222L378 196L350 170L322 144"/>
+            </g>
+          </svg>
+        </figure>
+      </div>
+    </section>
+
+    <!-- PRINCÍPIOS -->
+    <section class="secao secao--medio" id="principios" aria-labelledby="principios-titulo">
+      <div class="container">
+        <h2 class="principios__titulo" id="principios-titulo">Uma falha técnica dura segundos. O impacto em uma família é para sempre.</h2>
+        <div class="principios__grade">
+          <div class="principio">
+            <h3>Prevenção</h3>
+            <p>Identificar o risco antes que ele vire multa, parada de operação ou acidente.</p>
+          </div>
+          <div class="principio">
+            <h3>Responsabilidade</h3>
+            <p>Conformidade com a legislação ambiental e de segurança em cada entrega.</p>
+          </div>
+          <div class="principio">
+            <h3>Legado</h3>
+            <p>Operações que protegem as pessoas e o território por muito tempo.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section class="secao secao--clara" id="contato" aria-labelledby="contato-titulo">
+      <div class="container contato">
+        <div class="contato__intro">
+          <h2 id="contato-titulo">Conte o que a sua operação precisa.</h2>
+          <p>Descreva a situação da sua empresa e responderemos com os próximos passos.</p>
+
+          <!-- Preenchida pelo JS a partir de CONFIG (js/script.js). Itens vazios ficam ocultos. -->
+          <ul class="contatos" aria-label="Canais de contato">
+            <li data-contato="whatsapp" hidden>
+              <span class="contatos__rotulo">WhatsApp</span>
+              <a class="contatos__valor" href="#"></a>
+            </li>
+            <li data-contato="email" hidden>
+              <span class="contatos__rotulo">E-mail</span>
+              <a class="contatos__valor" href="#"></a>
+            </li>
+            <li data-contato="endereco" hidden>
+              <span class="contatos__rotulo">Endereço</span>
+              <span class="contatos__valor"></span>
+            </li>
+          </ul>
+        </div>
+
+        <form class="formulario" id="form-contato" novalidate>
+          <div class="campo">
+            <label for="nome">Nome</label>
+            <input id="nome" name="nome" type="text" autocomplete="name" required aria-describedby="nome-erro">
+            <p class="campo__erro" id="nome-erro"></p>
+          </div>
+
+          <div class="campo">
+            <label for="empresa">Empresa</label>
+            <input id="empresa" name="empresa" type="text" autocomplete="organization">
+          </div>
+
+          <div class="campo">
+            <label for="contato-retorno">WhatsApp ou e-mail para retorno</label>
+            <input id="contato-retorno" name="contato" type="text" autocomplete="off" required minlength="6" aria-describedby="contato-retorno-erro">
+            <p class="campo__erro" id="contato-retorno-erro"></p>
+          </div>
+
+          <div class="campo">
+            <label for="servico">Assunto</label>
+            <select id="servico" name="servico">
+              <option>Licenciamento ambiental</option>
+              <option>PGRS</option>
+              <option>Engenharia de Segurança do Trabalho</option>
+              <option>Mapeamento aéreo e modelos 3D</option>
+              <option>Outro assunto</option>
+            </select>
+          </div>
+
+          <div class="campo">
+            <label for="mensagem">Mensagem</label>
+            <textarea id="mensagem" name="mensagem" rows="4"></textarea>
+          </div>
+
+          <button class="botao botao--escuro" type="submit">Enviar mensagem</button>
+          <p class="form__status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="rodape">
+    <div class="container rodape__grade">
+      <div class="rodape__marca">
+        <a class="logo" href="#topo" aria-label="Yvira Engenharia e Meio Ambiente, voltar ao início">
+          <svg class="logo__marca" aria-hidden="true" focusable="false"><use href="#marca-folhas"></use></svg>
+          <span>
+            <span class="logo__nome">yvira</span>
+            <span class="logo__sub">Engenharia e Meio Ambiente</span>
+          </span>
+        </a>
+        <p>Engenharia ambiental para empresas que precisam operar com segurança e dentro da lei.</p>
+      </div>
+      <nav aria-label="Rodapé">
+        <ul class="rodape__links">
+          <li><a href="#servicos">Serviços</a></li>
+          <li><a href="#processo">Processo</a></li>
+          <li><a href="#mapeamento">Mapeamento aéreo</a></li>
+          <li><a href="#principios">Princípios</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="container rodape__base">
+      <p>© <span data-ano>2026</span> Yvira Engenharia e Meio Ambiente. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
