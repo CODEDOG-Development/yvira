@@ -786,6 +786,64 @@ a {
     gap: 4.5rem;
   }
 }
+/* 7.1 Cursos --------------------------------------------------- */
+.cursos__intro h2 {
+  max-width: 20ch;
+  color: var(--verde-escuro);
+}
+
+.cursos__intro p {
+  max-width: 34rem;
+  margin-top: 1.25rem;
+  font-size: var(--t-lead);
+  color: var(--cinza-secundario);
+}
+
+.cursos__grupos {
+  display: grid;
+  gap: 3rem;
+  margin-top: clamp(2.5rem, 5vw, 4rem);
+}
+
+.cursos__grupo h3 {
+  padding-bottom: 1rem;
+  color: var(--verde-medio);
+  border-bottom: 2px solid var(--verde-claro);
+}
+
+.cursos__lista {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.curso {
+  display: grid;
+  grid-template-columns: 4.5rem 1fr;
+  gap: 1rem;
+  padding-block: 1rem;
+  border-bottom: 1px solid var(--linha-clara);
+}
+
+.curso--simples {
+  grid-template-columns: 1fr;
+}
+
+.curso__codigo {
+  font-weight: 700;
+  color: var(--verde-medio);
+}
+
+.cursos__acao {
+  margin-top: 3rem;
+}
+
+@media (min-width: 60rem) {
+  .cursos__grupos {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 4rem;
+  }
+}
 
 /* 8. Princípios ------------------------------------------------ */
 .principios__titulo {
@@ -815,6 +873,222 @@ a {
   .principios__grade {
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 2.5rem;
+  }
+}
+/* 8.1 Diagnóstico ---------------------------------------------- */
+.diagnostico__intro h2 {
+  max-width: 20ch;
+}
+
+.diagnostico__intro p {
+  max-width: 38rem;
+  margin-top: 1.25rem;
+  font-size: var(--t-lead);
+  color: rgba(243, 255, 248, 0.88);
+}
+
+.diagnostico__cartao {
+  max-width: 48rem;
+  margin-top: clamp(2.5rem, 5vw, 4rem);
+  padding: clamp(1.5rem, 4vw, 2.75rem);
+  color: var(--cinza-texto);
+  background: #fff;
+  border-radius: 1rem;
+}
+
+/* Dentro do cartão branco o verde claro perde contraste */
+.diagnostico__cartao :focus-visible {
+  outline-color: var(--verde-medio);
+}
+
+.passos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.25rem;
+  margin: 0 0 2rem;
+  padding: 0 0 1.25rem;
+  list-style: none;
+  border-bottom: 1px solid var(--cinza-fundo);
+}
+
+.passos__item {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--cinza-secundario);
+}
+
+.passos__item::before {
+  content: attr(data-passo) ". ";
+}
+
+.passos__item[data-ativo] {
+  color: var(--verde-medio);
+}
+
+.etapa-form {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.etapa-form > legend {
+  padding: 0;
+  margin-bottom: 1.5rem;
+  font-family: var(--fonte-titulo);
+  font-size: 1.5rem;
+  color: var(--verde-escuro);
+}
+
+.pergunta {
+  margin: 0 0 1.75rem;
+  padding: 0;
+  border: 0;
+}
+
+.pergunta > legend {
+  padding: 0;
+  margin-bottom: 0.75rem;
+  font-size: 0.9375rem;
+  font-weight: 600;
+}
+
+.pergunta__dica {
+  font-weight: 400;
+  color: var(--cinza-secundario);
+}
+
+.opcoes {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.opcao {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  min-height: 3rem;
+  padding: 0.6rem 1rem;
+  font-size: 0.9375rem;
+  border: 1px solid var(--cinza-fundo);
+  border-radius: 0.6rem;
+  cursor: pointer;
+}
+
+.opcao input {
+  flex: none;
+  width: 1.15rem;
+  height: 1.15rem;
+  margin: 0;
+  accent-color: var(--verde-medio);
+}
+
+.opcao:hover {
+  border-color: var(--verde-claro);
+}
+
+/* :has() pinta o rótulo inteiro quando o controle dentro dele está marcado */
+.opcao:has(input:checked) {
+  color: var(--verde-escuro);
+  background: rgba(76, 175, 125, 0.1);
+  border-color: var(--verde-medio);
+}
+
+.campo--aceite {
+  padding-top: 0.5rem;
+}
+
+.aceite {
+  display: flex;
+  gap: 0.75rem;
+  font-size: 0.9375rem;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.aceite input {
+  flex: none;
+  width: 1.15rem;
+  height: 1.15rem;
+  margin-top: 0.15rem;
+  accent-color: var(--verde-medio);
+}
+
+.campo--camuflado {
+  position: absolute;
+  left: -9999px;
+}
+
+.diagnostico__nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--cinza-fundo);
+}
+
+.botao--simples {
+  color: var(--verde-escuro);
+  border-color: var(--cinza-secundario);
+}
+
+.botao--simples:hover {
+  border-color: var(--verde-escuro);
+}
+
+.parecer {
+  max-width: 48rem;
+  margin-top: 1.5rem;
+  padding: clamp(1.5rem, 4vw, 2.75rem);
+  color: var(--cinza-texto);
+  background: var(--offwhite);
+  border: 2px solid var(--verde-claro);
+  border-radius: 1rem;
+}
+
+.parecer__selo {
+  display: inline-block;
+  margin-bottom: 1rem;
+  padding: 0.35rem 0.9rem;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #fff;
+  background: var(--verde-medio);
+  border-radius: 999px;
+}
+
+.parecer h3 {
+  color: var(--verde-escuro);
+}
+
+.parecer > p {
+  margin-top: 1rem;
+}
+
+.parecer__pontos {
+  margin: 1.5rem 0 0;
+  padding-left: 1.25rem;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.parecer__aviso {
+  margin-top: 1.5rem;
+  padding-top: 1.25rem;
+  font-size: 0.875rem;
+  color: var(--cinza-secundario);
+  border-top: 1px solid var(--linha-clara);
+}
+
+.parecer .botao {
+  margin-top: 1.5rem;
+}
+
+@media (min-width: 48rem) {
+  .opcoes--duas {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
@@ -987,3 +1261,5 @@ a {
     transition: none;
   }
 }
+
+/* Codigo grande da porra!
